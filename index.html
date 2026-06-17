@@ -1269,7 +1269,7 @@
       <div class="cat-tile-bg cat-bg-eq"></div>
       <div class="cat-overlay">
         <span class="cat-label">Equestrian</span>
-        <span class="cat-sub">Hunter Trials · Polo · Dressage · Point-to-Point</span>
+        <span class="cat-sub">Hunter Trials · Polo · Point-to-Point</span>
         <span class="cat-arrow">→</span>
       </div>
     </a>
@@ -1299,7 +1299,7 @@
   <div class="portfolio-header">
     <p class="eyebrow">Portfolio</p>
     <h2 class="section-title" style="margin-bottom:10px">Equestrian</h2>
-    <p class="portfolio-header-desc">Hunter trials, polo, dressage, point-to-point and showjumping — captured at the decisive moment. Click any event to browse the full gallery. Private events require an access code.</p>
+    <p class="portfolio-header-desc">Hunter trials, polo, point-to-point and showjumping — captured at the decisive moment. Click any event to browse the full gallery. Private events require an access code.</p>
     <div style="display:flex;gap:8px;flex-wrap:wrap;">
       <span style="font-family:var(--sans);font-size:11px;color:var(--iron);display:flex;align-items:center;gap:6px;padding:6px 12px;border:1px solid rgba(74,72,69,0.18);border-radius:2px;">
         <span style="background:var(--bracken);width:8px;height:8px;border-radius:50%;display:inline-block"></span> Public — open to all
@@ -1314,19 +1314,18 @@
     <button class="filter-tab active" onclick="filterEvents(this,'eq','all')">All Events</button>
     <button class="filter-tab" onclick="filterEvents(this,'eq','hunter-trial')">Hunter Trials</button>
     <button class="filter-tab" onclick="filterEvents(this,'eq','polo')">Polo</button>
-    <button class="filter-tab" onclick="filterEvents(this,'eq','point-to-point')">Point-to-Point</button>
-    <button class="filter-tab" onclick="filterEvents(this,'eq','dressage')">Dressage</button>
+    <button class="filter-tab" onclick="filterEvents(this,'eq','point-to-point')">Point-to-Point</button
   </div>
 
   <div class="event-grid" id="eq-grid">
 
     <!-- PUBLIC event -->
     <a class="event-card" data-discipline="eq" data-tag="hunter-trial" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Beaufort Hunt — Hunter Trial','March 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Hunt — Hunter Trial','March 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#3D2B1F,#6B4A30,#4A2810)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Beaufort Hunt — Hunter Trial</p>
+        <p class="event-title">Hunt — Hunter Trial</p>
         <p class="event-meta">March 2025 &nbsp;·&nbsp; 84 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
@@ -1334,11 +1333,11 @@
 
     <!-- PUBLIC event -->
     <a class="event-card" data-discipline="eq" data-tag="polo" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Cotswold Polo Club — Summer Series','June 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Club — Summer Series','June 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#1A2C18,#2E4A22,#1A3010)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Cotswold Polo Club — Summer Series</p>
+        <p class="event-title">Polo Club — Summer Series</p>
         <p class="event-meta">June 2025 &nbsp;·&nbsp; 126 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
@@ -1346,11 +1345,11 @@
 
     <!-- PRIVATE event -->
     <a class="event-card event-card--hidden" data-discipline="eq" data-tag="point-to-point" data-access="private"
-       href="javascript:void(0)" onclick="openPrivateModal('Heythrop Point-to-Point — Spring Card','April 2025','EQ-HTH-0425')">
+       href="javascript:void(0)" onclick="openPrivateModal('Point-to-Point — Spring Card','April 2025','EQ-HTH-0425')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#2A3820,#3D5230,#253018)"></div>
       <div class="event-badge event-badge--private"><span class="event-badge-icon">🔒</span> Private</div>
       <div class="event-card-overlay">
-        <p class="event-title">Heythrop Point-to-Point — Spring Card</p>
+        <p class="event-title">Point-to-Point — Spring Card</p>
         <p class="event-meta">April 2025 &nbsp;·&nbsp; Access code required</p>
         <span class="event-cta">Enter code to view <span>→</span></span>
       </div>
@@ -1358,35 +1357,24 @@
 
     <!-- PUBLIC event -->
     <a class="event-card" data-discipline="eq" data-tag="hunter-trial" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Wiltshire Hunt — Autumn Hunter Trial','October 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Hunt — Autumn Hunter Trial','October 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#3A2818,#5A3C22,#3A2010)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Wiltshire Hunt — Autumn Hunter Trial</p>
+        <p class="event-title">Hunt — Autumn Hunter Trial</p>
         <p class="event-meta">October 2025 &nbsp;·&nbsp; 97 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
     </a>
 
-    <!-- PRIVATE event -->
-    <a class="event-card event-card--hidden" data-discipline="eq" data-tag="dressage" data-access="private"
-       href="javascript:void(0)" onclick="openPrivateModal('Moreton Morrell Dressage — Winter Qualifier','November 2025','EQ-MMD-1125')">
-      <div class="event-card-bg" style="background:linear-gradient(155deg,#18202A,#253040,#182030)"></div>
-      <div class="event-badge event-badge--private"><span class="event-badge-icon">🔒</span> Private</div>
-      <div class="event-card-overlay">
-        <p class="event-title">Moreton Morrell Dressage — Winter Qualifier</p>
-        <p class="event-meta">November 2025 &nbsp;·&nbsp; Access code required</p>
-        <span class="event-cta">Enter code to view <span>→</span></span>
-      </div>
-    </a>
 
     <!-- PUBLIC event -->
     <a class="event-card" data-discipline="eq" data-tag="polo" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Cirencester Park Polo — Charity Cup','August 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Polo — Charity Cup','August 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#1E3018,#304825,#202E16)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Cirencester Park Polo — Charity Cup</p>
+        <p class="event-title">Polo — Charity Cup</p>
         <p class="event-meta">August 2025 &nbsp;·&nbsp; 112 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
@@ -1425,66 +1413,66 @@
   <div class="event-grid" id="cs-grid">
 
     <a class="event-card" data-discipline="cs" data-tag="driven-shoot" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Blenheim Estate — Pheasant Season Opening','October 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Pheasant Season Opening Day','October 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#2A3818,#3D5228,#253018)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Blenheim Estate — Pheasant Season Opening</p>
+        <p class="event-title">Pheasant Season Opening Day</p>
         <p class="event-meta">October 2025 &nbsp;·&nbsp; 73 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
     </a>
 
     <a class="event-card event-card--hidden" data-discipline="cs" data-tag="driven-shoot" data-access="private"
-       href="javascript:void(0)" onclick="openPrivateModal('Private Estate Shoot — Oxfordshire','November 2025','CS-OX1-1125')">
+       href="javascript:void(0)" onclick="openPrivateModal('Private Estate Shoot — Wiltshire','November 2025','CS-OX1-1125')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#1E2A14,#2E3E1E,#182210)"></div>
       <div class="event-badge event-badge--private"><span class="event-badge-icon">🔒</span> Private</div>
       <div class="event-card-overlay">
-        <p class="event-title">Private Estate Shoot — Oxfordshire</p>
+        <p class="event-title">Private Estate Shoot — Wiltshire</p>
         <p class="event-meta">November 2025 &nbsp;·&nbsp; Access code required</p>
         <span class="event-cta">Enter code to view <span>→</span></span>
       </div>
     </a>
 
     <a class="event-card event-card--hidden" data-discipline="cs" data-tag="driven-shoot" data-access="private"
-       href="javascript:void(0)" onclick="openPrivateModal('Highgrove Shoot — Charity Day','December 2025','CS-HG1-1225')">
+       href="javascript:void(0)" onclick="openPrivateModal('Shoot Charity Day','December 2025','CS-HG1-1225')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#222A18,#303E22,#1C2412)"></div>
       <div class="event-badge event-badge--private"><span class="event-badge-icon">🔒</span> Private</div>
       <div class="event-card-overlay">
-        <p class="event-title">Highgrove Shoot — Charity Day</p>
+        <p class="event-title">Shoot Charity Day</p>
         <p class="event-meta">December 2025 &nbsp;·&nbsp; Access code required</p>
         <span class="event-cta">Enter code to view <span>→</span></span>
       </div>
     </a>
 
     <a class="event-card" data-discipline="cs" data-tag="game-day" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Cotswold Spaniels — Working Test','September 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Spaniel Working Test','September 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#2E3A20,#42522E,#263018)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Cotswold Spaniels — Working Test</p>
+        <p class="event-title">Spaniel Working Test</p>
         <p class="event-meta">September 2025 &nbsp;·&nbsp; 58 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
     </a>
 
     <a class="event-card" data-discipline="cs" data-tag="field-sports" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('CLA Game Fair — Midlands','July 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Game Fair','July 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#263020,#38462C,#1E2818)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">CLA Game Fair — Midlands</p>
+        <p class="event-title">Game Fair</p>
         <p class="event-meta">July 2025 &nbsp;·&nbsp; 144 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
     </a>
 
     <a class="event-card event-card--hidden" data-discipline="cs" data-tag="game-day" data-access="private"
-       href="javascript:void(0)" onclick="openPrivateModal('Stowell Park — Corporate Game Day','January 2026','CS-SP1-0126')">
+       href="javascript:void(0)" onclick="openPrivateModal('Corporate Game Day','January 2026','CS-SP1-0126')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#1C2618,#2A3822,#182014)"></div>
       <div class="event-badge event-badge--private"><span class="event-badge-icon">🔒</span> Private</div>
       <div class="event-card-overlay">
-        <p class="event-title">Stowell Park — Corporate Game Day</p>
+        <p class="event-title">Corporate Game Day</p>
         <p class="event-meta">January 2026 &nbsp;·&nbsp; Access code required</p>
         <span class="event-cta">Enter code to view <span>→</span></span>
       </div>
@@ -1523,33 +1511,33 @@
   <div class="event-grid" id="sp-grid">
 
     <a class="event-card" data-discipline="sp" data-tag="running" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Cotswold Way Challenge — 50k','May 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('50kChallenge','May 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#18202A,#253040,#182030)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Cotswold Way Challenge — 50k</p>
+        <p class="event-title">50k Challenge</p>
         <p class="event-meta">May 2025 &nbsp;·&nbsp; 218 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
     </a>
 
     <a class="event-card" data-discipline="sp" data-tag="cycling" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Malvern Hills Sportive','June 2025')">
+       href="javascript:void(0)" onclick="openPublicEvent('Sportive','June 2025')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#1A2438,#283550,#1A2238)"></div>
       <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
       <div class="event-card-overlay">
-        <p class="event-title">Malvern Hills Sportive</p>
+        <p class="event-title">Sportive</p>
         <p class="event-meta">June 2025 &nbsp;·&nbsp; 165 images</p>
         <span class="event-cta">Browse gallery <span>→</span></span>
       </div>
     </a>
 
     <a class="event-card event-card--hidden" data-discipline="sp" data-tag="team" data-access="private"
-       href="javascript:void(0)" onclick="openPrivateModal('Corporate Rugby Day — Cheltenham','March 2025','SP-RG1-0325')">
+       href="javascript:void(0)" onclick="openPrivateModal('Corporate Rugby Day','March 2025','SP-RG1-0325')">
       <div class="event-card-bg" style="background:linear-gradient(155deg,#20181A,#302228,#201618)"></div>
       <div class="event-badge event-badge--private"><span class="event-badge-icon">🔒</span> Private</div>
       <div class="event-card-overlay">
-        <p class="event-title">Corporate Rugby Day — Cheltenham</p>
+        <p class="event-title">Corporate Rugby Day</p>
         <p class="event-meta">March 2025 &nbsp;·&nbsp; Access code required</p>
         <span class="event-cta">Enter code to view <span>→</span></span>
       </div>
@@ -1577,16 +1565,6 @@
       </div>
     </a>
 
-    <a class="event-card" data-discipline="sp" data-tag="team" data-access="public"
-       href="javascript:void(0)" onclick="openPublicEvent('Cheltenham Festival — Corporate Day','March 2026')">
-      <div class="event-card-bg" style="background:linear-gradient(155deg,#1E2840,#2C3858,#1C2438)"></div>
-      <div class="event-badge event-badge--public"><span class="event-badge-icon">◆</span> Public</div>
-      <div class="event-card-overlay">
-        <p class="event-title">Cheltenham Festival — Corporate Day</p>
-        <p class="event-meta">March 2026 &nbsp;·&nbsp; 189 images</p>
-        <span class="event-cta">Browse gallery <span>→</span></span>
-      </div>
-    </a>
 
   </div>
 </section>
@@ -1609,13 +1587,13 @@
       <!-- Form view -->
       <div id="modal-form-view">
         <p class="modal-event-name" id="modal-event-name">Event name</p>
-        <p class="modal-desc">This gallery is private. If you attended this event, you should have received an access code by email. Contact me if you need it resent.</p>
+        <p class="modal-desc">This gallery is private. If you attended this event, you should have received an access code by email. Please contact me if you need the code to be resent.</p>
         <label class="modal-input-label" for="access-code-input">Access Code</label>
         <input class="modal-input" id="access-code-input" type="text"
                placeholder="e.g. EQ-HTH-0425"
                autocomplete="off" autocapitalize="characters"
                oninput="clearError()" onkeydown="if(event.key==='Enter')submitCode()">
-        <p class="modal-error" id="modal-error">That code isn't recognised. Please check and try again.</p>
+        <p class="modal-error" id="modal-error">That code is not recognised. Please check and try again.</p>
         <button class="modal-submit" onclick="submitCode()">Open Gallery</button>
         <p class="modal-hint">No code? <a href="#find-photos">Try the gallery finder</a> or <a href="#services">get in touch</a>.</p>
       </div>
@@ -1623,7 +1601,7 @@
       <div class="modal-success" id="modal-success-view">
         <span class="modal-success-icon">✓</span>
         <h3 class="modal-success-title">Access granted</h3>
-        <p class="modal-success-desc" id="modal-success-desc">Your gallery is ready. This link is unique to this event — bookmark it for easy return access.</p>
+        <p class="modal-success-desc" id="modal-success-desc">Your gallery is ready. This link is unique to this event — please bookmark it for easy return access.</p>
         <a href="javascript:void(0)" class="btn-primary" onclick="closeModal()">Open Gallery →</a>
       </div>
     </div>
@@ -1654,8 +1632,8 @@
   <div class="about-text">
     <p class="eyebrow eyebrow--light">About</p>
     <h2 class="section-title section-title--light" style="margin-bottom:24px">Passion for the subject.<br>Eye for the moment.</h2>
-    <p>I've spent years photographing the sports I love — from the early-morning stillness of a hunting field to the sharp intensity of a jump-off. These aren't environments I visit. They're environments I know.</p>
-    <p>Alongside my photography, I bring a career's worth of professional discipline — which means your images are delivered on time, beautifully presented, and exactly as you'd expect.</p>
+    <p>I have spent years photographing the sports I love — from the early-morning stillness of a hunting field to the sharp intensity of a jump-off. These are not environments I visit. They are environments I know and love.</p>
+    <p>Alongside my photography, I bring a career's worth of professional discipline — which means your images are delivered on time, beautifully presented, and to a high standard.</p>
     <a href="#about" class="btn-outline">Read More →</a>
   </div>
 </div>
@@ -1669,18 +1647,16 @@
   <h2 class="section-title" style="margin-bottom:8px">In their words</h2>
   <div class="test-grid">
     <div class="test-card">
-      <p class="test-quote">"The images from our hunter trial were exceptional. Parents were messaging us for days asking how to order more. We'll be booking Nicholas for every event."</p>
-      <p class="test-name">Sarah Pemberton</p>
-      <p class="test-event">Organiser — Wiltshire Hunter Trial</p>
+      <p class="test-quote">"The images from our hunter trial were gorgeous. We'll be booking Nicholas for every event."</p>
+      <p class="test-event">Organiser — Hunter Trial</p>
     </div>
     <div class="test-card">
       <p class="test-quote">"He completely disappeared into the background and still captured every important moment. That's a rare skill. The gallery was delivered fast and beautifully presented."</p>
-      <p class="test-name">Tom Ellison</p>
-      <p class="test-event">Secretary — Cotswold Polo Club</p>
+      <p class="test-event">Hunt Secretary</p>
     </div>
     <div class="test-card">
       <p class="test-quote">"I finally have a photograph of my horse clearing a fence that looks like a proper sports image, not a snapshot. I've had it framed. Worth every penny."</p>
-      <p class="test-name">H. Fairfax</p>
+      <p class="test-name">H. Wiltshire
       <p class="test-event">Event Rider</p>
     </div>
   </div>
@@ -1696,7 +1672,7 @@
     <div class="service-card">
       <span class="service-icon">🏇</span>
       <h3 class="service-title">Event Photography</h3>
-      <p class="service-desc">I cover equestrian and country sports events across the region. Images are uploaded to a private client gallery within 48 hours. Participants browse and purchase directly — there's nothing for you to manage.</p>
+      <p class="service-desc">I cover equestrian and country sports events across the region. Images are uploaded to a private client gallery within 48 hours. Participants browse and purchase directly — there is nothing for you to manage.</p>
       <a href="#find-photos" class="service-link">Enquire about your event →</a>
     </div>
     <div class="service-card">
@@ -1914,7 +1890,7 @@
       </div>
       <div class="type-card">
         <p class="type-role">Caption / Metadata — Inter Regular, Iron</p>
-        <p class="t-caption" style="color:var(--iron)">Beaufort Hunt Point-to-Point · March 2025 · © Nicholas Caro Photography</p>
+        <p class="t-caption" style="color:var(--iron)">Hunt Point-to-Point · March 2025 · © Nicholas Caro Photography</p>
       </div>
       <div class="type-card">
         <p class="type-role">Buttons — Inter SemiBold 600, Uppercase, Letter-spaced 0.15em</p>
