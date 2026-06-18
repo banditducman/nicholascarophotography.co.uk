@@ -509,10 +509,6 @@
 </div>
 
 <script>
-const GITHUB_TOKEN = 'PASTE_YOUR_TOKEN_HERE';
-const GITHUB_REPO  = 'Banditducman/nicholascarophotography.co.uk';
-const FILE_PATH    = 'NCPhoto contact requests.txt';
-
 async function submitNotify() {
   const input = document.getElementById('notify-email');
   const email = input.value.trim();
@@ -529,34 +525,13 @@ async function submitNotify() {
   btn.disabled = true;
 
   try {
-    const apiBase = `https://api.github.com/repos/${GITHUB_REPO}/contents/${encodeURIComponent(FILE_PATH)}`;
-    const headers = {
-      'Authorization': `token ${GITHUB_TOKEN}`,
-      'Accept': 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json'
-    };
+    const res = await fetch('https://pat.nicholasacaro.workers.dev/notify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email })
+    });
 
-    // Fetch existing file (to get SHA and current content)
-    let existingContent = '';
-    let sha = undefined;
-    const getRes = await fetch(apiBase, { headers });
-    if (getRes.ok) {
-      const data = await getRes.json();
-      existingContent = atob(data.content.replace(/\n/g, ''));
-      sha = data.sha;
-    }
-
-    // Append new entry with timestamp
-    const timestamp = new Date().toISOString();
-    const newContent = existingContent + `${email} — ${timestamp}\n`;
-    const encoded = btoa(unescape(encodeURIComponent(newContent)));
-
-    const body = { message: `Add contact request: ${email}`, content: encoded };
-    if (sha) body.sha = sha;
-
-    const putRes = await fetch(apiBase, { method: 'PUT', headers, body: JSON.stringify(body) });
-
-    if (!putRes.ok) throw new Error(`GitHub API error: ${putRes.status}`);
+    if (!res.ok) throw new Error('Worker error: ' + res.status);
 
     document.getElementById('notify-row').style.display = 'none';
     document.getElementById('notify-confirm').classList.add('visible');
