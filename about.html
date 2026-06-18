@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Nicholas Caro Photography</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --dark-earth: #1C1A17;
+    --birch:      #F0EBE1;
+    --bracken:    #7D5A3C;
+    --pale-sky:   #C8D8E0;
+    --iron:       #4A4845;
+    --serif:      'Cormorant Garamond', Georgia, serif;
+    --sans:       'Inter', system-ui, sans-serif;
+  }
+
+  html, body {
+    min-height: 100%;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: var(--sans);
+    background: var(--dark-earth);
+    color: var(--birch);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── BACKGROUND ──
+     Replace the background property below with your chosen photograph.
+     Example: background-image: url('images/about-bg.jpg');
+     The overlays beneath are pre-tuned for a landscape/field image. */
+  .bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    background: var(--dark-earth);
+    /* background-image: url('images/about-bg.jpg');
+       background-size: cover;
+       background-position: center; */
+  }
+
+  .bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(18,22,28,0.30) 0%,
+      rgba(18,22,28,0.08) 40%,
+      rgba(20,18,14,0.20) 70%,
+      rgba(20,18,14,0.60) 100%
+    );
+  }
+
+  .bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(28,26,23,0.95) 0%,
+      rgba(28,26,23,0.70) 35%,
+      rgba(28,26,23,0.30) 60%,
+      rgba(28,26,23,0.15) 100%
+    );
+  }
+
+  /* ── PAGE GRID ── */
+  .page {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 36px 52px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .logo-name {
+    font-family: var(--serif);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--birch);
+    letter-spacing: 0.02em;
+    line-height: 1;
+  }
+
+  .logo-rule {
+    height: 0.5px;
+    background: var(--birch);
+    opacity: 0.7;
+  }
+
+  .logo-sub {
+    font-family: var(--sans);
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--pale-sky);
+    line-height: 1;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  nav a {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(240,235,225,0.50);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  nav a:hover  { color: var(--birch); }
+  nav a.active { color: var(--pale-sky); border-bottom: 1px solid rgba(200,216,224,0.4); padding-bottom: 2px; }
+
+  /* ── DISCIPLINE STRIP ── */
+  .discipline-strip {
+    padding: 28px 52px 0;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .discipline-pip {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(200,216,224,0.65);
+  }
+
+  .discipline-pip::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--bracken);
+    flex-shrink: 0;
+  }
+
+  .discipline-divider {
+    width: 1px;
+    height: 14px;
+    background: rgba(240,235,225,0.15);
+  }
+
+  /* ── MAIN ── */
+  main {
+    padding: 64px 52px 88px;
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 88px;
+    align-items: start;
+    max-width: 1140px;
+  }
+
+  /* ── LEFT COLUMN — TEXT ── */
+  .page-label {
+    display: block;
+    font-family: var(--sans);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--pale-sky);
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(40px, 5.5vw, 68px);
+    font-weight: 300;
+    line-height: 1.03;
+    color: var(--birch);
+    letter-spacing: -0.01em;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--pale-sky);
+    font-weight: 300;
+  }
+
+  .rule {
+    width: 44px;
+    height: 1px;
+    background: var(--bracken);
+    margin: 32px 0;
+  }
+
+  .body-copy {
+    font-family: var(--sans);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.85;
+    color: rgba(240,235,225,0.70);
+    max-width: 540px;
+  }
+
+  .body-copy p + p { margin-top: 20px; }
+
+  /* ── CTA ROW ── */
+  .cta-row {
+    margin-top: 52px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .cta-link {
+    font-family: var(--sans);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--pale-sky);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(200,216,224,0.30);
+    padding-bottom: 3px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .cta-link:hover {
+    color: var(--birch);
+    border-color: rgba(240,235,225,0.50);
+  }
+
+  .cta-sep {
+    width: 1px;
+    height: 14px;
+    background: rgba(240,235,225,0.15);
+  }
+
+  /* ── RIGHT COLUMN — PORTRAIT + CREDENTIALS ── */
+  .portrait-frame {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border: 1px solid rgba(240,235,225,0.10);
+    background: rgba(240,235,225,0.03);
+    overflow: hidden;
+  }
+
+  /* Inner hairline — matches the logo SVG double-border motif */
+  .portrait-frame::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 0.5px solid rgba(240,235,225,0.07);
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* When you have a portrait, replace this with an <img> tag:
+     <img src="images/nicholas-caro.jpg" alt="Nicholas Caro"
+          style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"> */
+  .portrait-placeholder {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portrait-placeholder-text {
+    font-family: var(--serif);
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(240,235,225,0.18);
+    text-align: center;
+    line-height: 1.7;
+  }
+
+  /* ── CREDENTIALS ── */
+  .credentials {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .credential-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .credential-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--bracken);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+
+  .credential-text {
+    font-family: var(--sans);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.65;
+    color: rgba(240,235,225,0.42);
+    letter-spacing: 0.01em;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 28px 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(240,235,225,0.08);
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-copy {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: rgba(240,235,225,0.28);
+    letter-spacing: 0.04em;
+  }
+
+  .footer-contact {
+    font-family: var(--sans);
+    font-size: 11px;
+    color: rgba(240,235,225,0.40);
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-contact:hover { color: var(--pale-sky); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 960px) {
+    main {
+      grid-template-columns: 1fr;
+      gap: 52px;
+    }
+    .about-image { display: none; }
+  }
+
+  @media (max-width: 640px) {
+    header          { padding: 28px 24px 0; flex-direction: column; align-items: flex-start; gap: 24px; }
+    nav             { gap: 20px; flex-wrap: wrap; }
+    .discipline-strip { padding: 20px 24px 0; flex-wrap: wrap; gap: 10px; }
+    .discipline-divider { display: none; }
+    main            { padding: 40px 24px 64px; }
+    footer          { padding: 20px 24px; flex-direction: column; gap: 10px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<div class="bg"></div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header>
+    <a href="index.html" class="logo">
+      <div style="flex-shrink:0">
+        <svg width="44" height="44" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="44" height="44" stroke="#F0EBE1" stroke-width="1.1"/>
+          <rect x="4.5" y="4.5" width="37" height="37" stroke="#F0EBE1" stroke-width="0.4"/>
+          <text x="23" y="30" text-anchor="middle"
+            font-family="Georgia,'Times New Roman',serif"
+            font-size="18" font-weight="400"
+            fill="#F0EBE1" letter-spacing="1">NC</text>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">Nicholas Caro</span>
+        <div class="logo-rule"></div>
+        <span class="logo-sub">Photography</span>
+      </div>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="galleries.html">Galleries</a>
+      <a href="about.html" class="active">About</a>
+      <a href="mailto:Nicholas@caro.me.uk">Contact</a>
+    </nav>
+  </header>
+
+  <!-- DISCIPLINE STRIP -->
+  <div class="discipline-strip">
+    <span class="discipline-pip">Equestrian</span>
+    <div class="discipline-divider"></div>
+    <span class="discipline-pip">Country Sports</span>
+    <div class="discipline-divider"></div>
+    <span class="discipline-pip">Sport &amp; Action</span>
+  </div>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- LEFT: Copy -->
+    <div class="about-text">
+
+      <span class="page-label">About</span>
+
+      <h1>The eye<br>behind the <em>lens.</em></h1>
+
+      <div class="rule"></div>
+
+      <div class="body-copy">
+        <p>Nicholas Caro is a Wiltshire-based photographer specialising in country sports, equestrian, and sports-action photography.</p>
+
+        <p>Photography has been a constant since childhood — a discipline that rewards patience, precise timing, and an eye trained to anticipate rather than simply react. That instinct, sharpened through deliberate practice, has become a craft for capturing decisive moments in conditions that rarely cooperate.</p>
+
+        <p>An international career in retail technology consulting — spanning roles from Analyst Programmer through to Vice President of Professional Services — has built habits that translate directly into this work. The ability to read a situation quickly, understand what a client actually needs rather than what they ask for, and deliver under pressure are not peripheral advantages in field photography. They are prerequisites.</p>
+
+        <p>The images on this site are available for personal and commercial licensing and as prints. Each is offered on the basis that it earns its place — technically sound, compositionally considered, and suited to its intended use.</p>
+
+        <p>If something here interests you, the next step is straightforward.</p>
+      </div>
+
+      <div class="cta-row">
+        <a href="galleries.html" class="cta-link">View Galleries</a>
+        <div class="cta-sep"></div>
+        <a href="mailto:Nicholas@caro.me.uk" class="cta-link">Get in Touch</a>
+      </div>
+
+    </div>
+
+    <!-- RIGHT: Portrait + credentials -->
+    <div class="about-image">
+
+      <div class="portrait-frame">
+        <!--
+          PORTRAIT PLACEHOLDER
+          Replace this div with your image when ready:
+
+          <img src="images/nicholas-caro-portrait.jpg"
+               alt="Nicholas Caro"
+               style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        -->
+        <div class="portrait-placeholder">
+          <p class="portrait-placeholder-text">Portrait photograph<br>to follow</p>
+        </div>
+      </div>
+
+      <div class="credentials">
+        <div class="credential-item">
+          <div class="credential-dot"></div>
+          <span class="credential-text">Based in Wiltshire, England</span>
+        </div>
+        <div class="credential-item">
+          <div class="credential-dot"></div>
+          <span class="credential-text">Equestrian, country sports &amp; sports-action photography</span>
+        </div>
+        <div class="credential-item">
+          <div class="credential-dot"></div>
+          <span class="credential-text">International consulting career — Analyst Programmer to VP Professional Services</span>
+        </div>
+        <div class="credential-item">
+          <div class="credential-dot"></div>
+          <span class="credential-text">Images available for personal and commercial licensing, and as prints</span>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-copy">© 2026 Nicholas Caro Photography. All rights reserved.</span>
+    <a href="mailto:Nicholas@caro.me.uk" class="footer-contact">Nicholas@caro.me.uk</a>
+  </footer>
+
+</div>
+
+</body>
+</html>
