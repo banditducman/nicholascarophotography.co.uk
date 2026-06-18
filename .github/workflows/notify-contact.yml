@@ -1,0 +1,34 @@
+name: Notify new contact request
+
+on:
+  push:
+    paths:
+      - 'NCPhoto contact requests.txt'
+
+jobs:
+  send-email:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Get latest entry
+        id: entry
+        run: echo "line=$(tail -1 'NCPhoto contact requests.txt')" >> $GITHUB_OUTPUT
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: nicholasacaro@gmail.com
+          password: ${{ secrets.GMAIL_APP_PASSWORD }}
+          subject: "New contact request — Nicholas Caro Photography"
+          to: nicholasacaro@gmail.com
+          from: nicholasacaro@gmail.com
+          body: |
+            A new visitor has requested to be notified when your site launches:
+
+            ${{ steps.entry.outputs.line }}
+
+            View all entries: https://github.com/banditducman/nicholascarophotography.co.uk/blob/main/NCPhoto%20contact%20requests.txt
+      
